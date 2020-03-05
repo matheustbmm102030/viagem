@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.CONDUTOR.JanelaCondutorController">
+   <children>
+      <Label layoutX="18.0" prefHeight="52.0" prefWidth="782.0" style="-fx-background-color: white;" text="Cadastro de Condutores">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfid" editable="false" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="60.0" promptText="Cod. Condutor" />
+      <JFXTextField fx:id="tfnomemotorista" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="109.0" prefHeight="25.0" prefWidth="135.0" promptText="Nome do Motorista" />
+      <JFXTextField fx:id="tfsetor" focusColor="BLACK" labelFloat="true" layoutX="177.0" layoutY="109.0" promptText="Setor" />
+      <JFXTextField fx:id="tfcnh" focusColor="BLACK" labelFloat="true" layoutX="335.0" layoutY="109.0" promptText="C.N.H" />
+      <JFXButton layoutX="403.0" layoutY="557.0" onAction="#salvar" style="-fx-background-color: black;" text="Salvar Condutor" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></JFXButton>
+      <JFXButton layoutX="537.0" layoutY="557.0" onAction="#editar" style="-fx-background-color: black;" text="Editar Condutor" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="672.0" layoutY="557.0" onAction="#excluir" style="-fx-background-color: black;" text="Excluir Condutor" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="177.0" layoutY="152.0" onAction="#buscar" style="-fx-background-color: black;" text="Buscar" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <TableView fx:id="tbcondutor" layoutX="20.0" layoutY="204.0" prefHeight="334.0" prefWidth="765.0">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colnome" prefWidth="301.0" text="Nome do Motorista" />
+            <TableColumn fx:id="colsetor" prefWidth="213.0" text="Setor" />
+            <TableColumn fx:id="colcnh" prefWidth="178.0" text="CNH" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="tfBuscarNome" focusColor="BLACK" layoutX="20.0" layoutY="154.0" promptText="Buscar nome" />
+   </children>
+</AnchorPane>
